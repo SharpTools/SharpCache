@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "SharpCache Class Library",
   "authors": [ "Andre Carlucci" ],
   "tags": [ "cache", "inmemory", "multithread" ],
