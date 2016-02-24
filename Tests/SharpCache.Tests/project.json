@@ -1,0 +1,25 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "SharpCache.Tests Console Application",
+  "authors": [ "Andre" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "NUnitLite": "3.0.1",
+    "SharpCache": "1.2.1"
+  },
+
+  "commands": {
+    "SharpCache.Tests": "SharpCache.Tests"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}
