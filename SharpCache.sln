@@ -1,18 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7DA717C5-8394-4977-92A0-763174A82F58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpCache", "SharpCache\SharpCache.csproj", "{F169850D-C317-4D9D-A94C-B15A8F678730}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4D8F35F2-354A-406E-9F4A-0FDED067F881}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpCache.Tests", "SharpCache.Tests\SharpCache.Tests.csproj", "{02072AF8-4B79-4D72-A169-F65C967D626D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{3D082EDC-29BA-4D57-A522-F9EAE336B37B}"
 	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
+		README.md = README.md
 	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SharpCache", "src\SharpCache\SharpCache.xproj", "{C2BCF61F-C364-4672-AEC5-DD69AD8C3B4F}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SharpCache.Tests", "Tests\SharpCache.Tests\SharpCache.Tests.xproj", "{38163F2D-70F0-499D-B64C-8C920881DFF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,20 +18,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C2BCF61F-C364-4672-AEC5-DD69AD8C3B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2BCF61F-C364-4672-AEC5-DD69AD8C3B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2BCF61F-C364-4672-AEC5-DD69AD8C3B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2BCF61F-C364-4672-AEC5-DD69AD8C3B4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38163F2D-70F0-499D-B64C-8C920881DFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38163F2D-70F0-499D-B64C-8C920881DFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38163F2D-70F0-499D-B64C-8C920881DFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38163F2D-70F0-499D-B64C-8C920881DFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F169850D-C317-4D9D-A94C-B15A8F678730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F169850D-C317-4D9D-A94C-B15A8F678730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F169850D-C317-4D9D-A94C-B15A8F678730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F169850D-C317-4D9D-A94C-B15A8F678730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02072AF8-4B79-4D72-A169-F65C967D626D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02072AF8-4B79-4D72-A169-F65C967D626D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02072AF8-4B79-4D72-A169-F65C967D626D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02072AF8-4B79-4D72-A169-F65C967D626D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C2BCF61F-C364-4672-AEC5-DD69AD8C3B4F} = {7DA717C5-8394-4977-92A0-763174A82F58}
-		{38163F2D-70F0-499D-B64C-8C920881DFF0} = {7DA717C5-8394-4977-92A0-763174A82F58}
 	EndGlobalSection
 EndGlobal

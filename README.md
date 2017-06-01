@@ -1,9 +1,9 @@
 # SharpCache
 The simplest in-memory threadsafe cache you will find
 
-##Usage:
+## Usage:
 
-```
+```cs
   //create cache with maximum 300 items and with expiration of 30 seconds
   var cache = new MemCache<int, string>(3, TimeSpan.FromSeconds(30));
   
@@ -18,7 +18,7 @@ The simplest in-memory threadsafe cache you will find
 
 Item expiration date is renewed when it is retrieved from cache.
 Ex:
-```
+```cs
   var cache = new MemCache<int, string>(300, TimeSpan.FromSeconds(30));
   _cache.Add(1, "foo"); //30s to expire
   // 5s later
@@ -26,7 +26,7 @@ Ex:
 ```
 
 You can change that setting AutoRenew to false.
-```
+```cs
   _cache.AutoRenew = renewAge;
   _cache.Add(1, "foo"); //30s to expire
   // 5s later
@@ -37,7 +37,7 @@ You can change that setting AutoRenew to false.
 
 When the cache is full, the oldest item is removed.
 Ex:
-```
+```cs
   var cache = new MemCache<int, string>(3, TimeSpan.FromSeconds(30));
   _cache.Add(1, "foo1");
   _cache.Add(2, "foo2");

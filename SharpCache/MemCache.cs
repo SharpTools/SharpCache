@@ -5,7 +5,7 @@ namespace SharpCache {
     public class MemCache<TK, TV> where TV : class {
         private readonly int _maxItems;
         private readonly TimeSpan _expirationSpan;
-        private static object _syncRoot = new object();
+        private object _syncRoot = new object();
         private Dictionary<TK, CachedItem> _dic = new Dictionary<TK, CachedItem>();
 
         public bool AutoRenew { get; set; } = true;
