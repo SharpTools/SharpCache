@@ -23,6 +23,19 @@ namespace SharpCache {
                 _dic[key] = new CachedItem(value, _expirationSpan);
             }
         }
+        private void RemoveOldest() {
+            var oldest = DateTime.MaxValue;
+            var key = default(TK);
+            foreach (var keyValue in _dic) {
+                if (keyValue.Value.LastUsed < oldest) {
+                    oldest = keyValue.Value.LastUsed;
+                    key = keyValue.Key;
+                }
+            }
+            if (key != null) {
+                _dic.Remove(key);
+            }
+        }
 
         public TV Get(TK key) {
             lock (_syncRoot) {
@@ -41,20 +54,12 @@ namespace SharpCache {
             }
         }
 
-        private void RemoveOldest() {
-            var oldest = DateTime.MaxValue;
-            var key = default(TK);
-            foreach (var keyValue in _dic) {
-                if (keyValue.Value.LastUsed < oldest) {
-                    oldest = keyValue.Value.LastUsed;
-                    key = keyValue.Key;
-                }
-            }
-            if (key != null) {
+        public void Invalidate(TK key) {
+            lock(_syncRoot) {
                 _dic.Remove(key);
             }
         }
-
+        
         private class CachedItem {
             private readonly TimeSpan _expiration;
             public DateTime LastUsed { get; private set; }

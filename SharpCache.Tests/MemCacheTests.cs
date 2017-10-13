@@ -49,5 +49,19 @@ namespace SharpCache.Tests {
             await Task.Delay(25);
             Assert.Equal(renewAge ? "a" : null, _cache.Get(1));
         }
+
+        [Fact]
+        public void Should_invalidate_cache() {
+            _cache = new MemCache<int, string>(3, TimeSpan.MaxValue);
+            _cache.Add(1, "a");
+            _cache.Invalidate(1);
+            Assert.Null(_cache.Get(1));
+        }
+
+        [Fact]
+        public void Should_not_break_when_invalidating_non_existent_cache() {
+            _cache = new MemCache<int, string>(3, TimeSpan.MaxValue);
+            _cache.Invalidate(1);
+        }
     }
 }
