@@ -62,6 +62,7 @@ namespace SharpCache.Tests {
         public void Should_not_break_when_invalidating_non_existent_cache() {
             _cache = new MemCache<int, string>(3, TimeSpan.MaxValue);
             _cache.Invalidate(1);
+            Assert.Null(_cache.Get(1));
         }
     }
 }
